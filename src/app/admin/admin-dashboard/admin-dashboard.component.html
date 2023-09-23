@@ -1,0 +1,18 @@
+<!-- component -->
+<body class="font-poppins antialiased">
+    <div
+      id="view"
+      class="h-full w-screen flex flex-row"
+      x-data="{ sidenav: true }"
+    >
+      
+      <app-admin-sidebar></app-admin-sidebar>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <!-- <div class="con">
+        This is right side
+    </div> -->
+  </body>

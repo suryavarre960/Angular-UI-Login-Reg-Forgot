@@ -1,0 +1,141 @@
+<div class="relative min-h-screen flex ">
+    <div class="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 bg-white">
+      <div class="sm:w-1/2 md:w-1/4 xl:w-2/5 h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
+        style="background-image: url(https://images.unsplash.com/photo-1579451861283-a2239070aaa9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);">
+        <div class="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-75 inset-0 z-0"></div>
+        <div class="w-full  max-w-md z-10">
+          <div class="sm:text-4xl xl:text-5xl font-bold leading-tight mb-6">Reference site about Lorem Ipsum..</div>
+          <div class="sm:text-sm xl:text-md text-gray-200 font-normal"> What is Lorem Ipsum Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it
+            has?</div>
+        </div>
+        <!---remove custom style-->
+       <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+      </div>
+      <div class="md:flex md:items-center md:justify-center w-full sm:w-auto md:h-full xl:w-3/5 p-8  md:p-10 lg:p-14 sm:rounded-lg md:rounded-none bg-white">
+        <div class="max-w-xl w-full space-y-8">
+          <div class="text-center">
+            <h2 class="mt-2 text-3xl font-bold text-gray-900">
+              Welcom To MY FOOD..!
+            </h2>
+            <p class="mt-2 text-sm text-gray-500">Register</p>
+          </div>
+          <form class="mt-8 space-y-6" [formGroup]="registerForm" novalidate>
+            <div class="mb-4 md:flex">
+                <div class="w-1/2 mb-4 md:mr-6 md:mb-0">
+                    <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
+                        First Name 
+                    </label>
+                    <input
+                    class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                        id="firstName"
+                        type="text"
+                        formControlName="firstName"
+                        placeholder="First Name"
+                    />
+                   <span *ngIf="registerForm.hasError('required','firstName') && registerForm.controls['firstName'].dirty" class="text-xs italic text-red-500">First Name is Required.</span> 
+                </div>
+                    <div class="w-1/2 mb-4 md:mr-2 md:mb-0">
+                        <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+                            Last Name
+                        </label>
+                        <input
+                        class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                            id="lastName"
+                            type="text"
+                            formControlName="lastName"
+                            placeholder="Last Name"
+                        />
+                        <span *ngIf="registerForm.hasError('required','lastName') && registerForm.controls['lastName'].dirty" class="text-xs italic text-red-500">Last Name is Required.</span>
+                    </div>
+            </div>
+           
+
+            <div class="mb-4 md:flex">
+                <div class="w-1/2 mb-4 md:mr-6 md:mb-0">
+                    <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
+                        User Name
+                    </label>
+                    <input
+                    class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                        id="username"
+                        type="text"
+                        formControlName="userName"
+                        placeholder="User Namee"
+                    />
+                </div>
+                    <div class="w-1/2 mb-4 md:mr-2 md:mb-0">
+                        <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+                            Email
+                        </label>
+                        <input
+                        class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                            id="email"
+                            type="email"
+                            formControlName="email"
+                            placeholder="Email"
+                        />
+                        <span *ngIf="registerForm.hasError('required','email') && registerForm.controls['email'].dirty" class="text-xs italic text-red-500">Email is Required.</span>
+                        <span *ngIf="registerForm.hasError('email','email')" class="text-xs italic text-red-500">InValid Email.</span>
+                    </div>
+            </div>
+             
+            <div class="mb-4 md:flex">
+                <div class="w-1/2 mb-4 md:mr-6 md:mb-0">
+                    <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
+                        Password
+                    </label>
+                    <input
+                    class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                        id="password"
+                        type="password"
+                        formControlName="password"
+                        placeholder="Password"
+                    />
+                </div>
+                    <div class="w-1/2 mb-4 md:mr-2 md:mb-0">
+                        <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+                            Confirm Password
+                        </label>
+                        <input
+                        class="w-full content-center text-base px-4 py-2 border rounded border-gray-400 focus:outline-none focus:border-indigo-500"
+                            id="confirmpassword"
+                            type="password"
+                            formControlName="confirmPassword"
+                            placeholder="Confirm Password"
+                        />
+                        <span *ngIf="registerForm.hasError('confirmPasswordValodator','confirmPassword')" class="text-xs italic text-red-500">Password did't match.</span>
+                    </div>
+            </div>
+            <div>
+              <button type="button" [disabled]="registerForm.invalid" [class.disable]="registerForm.invalid" (click)="register()"
+                class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+                font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 
+                dark:focus:ring-blue-800">
+                Sign Up
+              </button>
+            </div>
+            <p class="text-sm font-medium text-gray-500 dark:text-gray-300">
+              <span>You already have a account?
+                <a routerLink="/login"
+                class="text-blue-700 hover:underline dark:text-blue-500">Login
+                </a>
+              </span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
